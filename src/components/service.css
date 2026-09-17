@@ -1,0 +1,807 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080D11;
+    color: white;
+}
+.serviceContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.Supper{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #CC9B3B;
+    font-family: sans-serif;
+    .ri-scales-line{
+        font-size: 35px;
+    }
+}
+.Sh1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    span{
+        color: #CC9B3B;
+    }
+}
+.Spara{
+    margin-top: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.cards{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: rows;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.cardContainer{
+    align-items: center;
+    width: 18%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #222524;
+    border-radius: 20px;
+    text-align: center;
+    gap: 15px;
+    img{
+        margin-top:1px ;
+        width: 100%;
+    }
+    h2{
+        font-family: sans-serif;
+        font-size: 30px;
+    }
+    p{
+        font-size: 18px;
+    }
+    .cardIcon{
+        color: #CC9B3B;
+        padding: 10px;
+        font-size: 60px;
+        margin-top: -50px;
+        border-radius: 90%;
+        background-color: #080D11;
+        border: 2px solid #CC9B3B;
+    }
+}
+.cardsbtn{
+        color: #CC9B3B;
+        background-color: #080D11;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+}
+.card2Container {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    gap: 5px;
+    font-size: 28px;
+}
+.card2Container {
+    border-right: 1px solid #222524;
+}
+
+.card2Container .cardIcon2 {
+    color: #CC9B3B;
+    font-size: 60px;
+}
+.sLast {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #222524;
+    border-radius: 40px;
+    gap: 20px;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080D11;
+    color: white;
+    overflow-x: hidden;
+}
+
+.serviceContainer {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 40px 20px;
+}
+
+
+/* =================================
+   TOP SERVICE TITLE
+================================= */
+
+.Supper {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    color: #CC9B3B;
+    font-family: sans-serif;
+}
+
+.Supper .ri-scales-line {
+    font-size: 35px;
+}
+
+
+/* =================================
+   MAIN HEADING
+================================= */
+
+.Sh1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.Sh1 span {
+    color: #CC9B3B;
+}
+
+
+/* =================================
+   DESCRIPTION
+================================= */
+
+.Spara {
+    margin-top: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+
+/* =================================
+   CARD SLIDER
+================================= */
+
+.cardSlider {
+    width: 100%;
+    max-width: 1400px;
+
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+/* =================================
+   CARDS WRAPPER
+================================= */
+
+.cards {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    overflow: hidden;
+}
+
+
+/* =================================
+   INDIVIDUAL CARD
+================================= */
+
+.cardContainer {
+    width: 100%;
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 2px solid #222524;
+    border-radius: 20px;
+
+    text-align: center;
+
+    gap: 15px;
+
+    overflow: hidden;
+
+    background-color: #080D11;
+}
+
+
+/* CARD IMAGE */
+
+.cardContainer img {
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* CARD ICON */
+
+.cardContainer .cardIcon {
+    color: #CC9B3B;
+
+    padding: 10px;
+
+    font-size: 50px;
+
+    margin-top: -40px;
+
+    border-radius: 50%;
+
+    background-color: #080D11;
+
+    border: 2px solid #CC9B3B;
+
+    z-index: 2;
+}
+
+
+/* CARD HEADING */
+
+.cardContainer h2 {
+    font-family: sans-serif;
+    font-size: 25px;
+    padding: 0 10px;
+}
+
+
+/* CARD DESCRIPTION */
+
+.cardContainer p {
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    padding: 0 15px;
+}
+
+
+/* =================================
+   LEARN MORE BUTTON
+================================= */
+
+.cardsbtn {
+    margin-top: auto;
+    margin-bottom: 20px;
+
+    color: #CC9B3B;
+
+    background-color: transparent;
+
+    border: none;
+
+    padding: 10px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cardsbtn:hover {
+    color: white;
+}
+
+
+/* =================================
+   LEFT / RIGHT SLIDER BUTTONS
+================================= */
+
+.sliderBtn {
+    flex-shrink: 0;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 2px solid #CC9B3B;
+
+    background-color: transparent;
+
+    color: #CC9B3B;
+
+    font-size: 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.sliderBtn:hover {
+    background-color: #CC9B3B;
+    color: #080D11;
+
+    transform: scale(1.08);
+}
+
+
+/* =================================
+   STATISTICS SECTION
+================================= */
+
+.sLast {
+    width: 100%;
+    max-width: 1200px;
+
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: row;
+
+    border: 2px solid #222524;
+
+    border-radius: 40px;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    background-color: #080D11;
+}
+
+
+/* =================================
+   STATISTICS CARD
+================================= */
+
+.card2Container {
+    flex: 1;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 5px;
+
+    font-size: 28px;
+
+    border-right: 1px solid #222524;
+}
+
+
+/* REMOVE BORDER FROM LAST CARD */
+
+.card2Container:last-child {
+    border-right: none;
+}
+
+
+/* STAT ICON */
+
+.card2Container .cardIcon2 {
+    color: #CC9B3B;
+    font-size: 50px;
+}
+
+
+/* =================================
+   TABLET
+   769px - 1100px
+================================= */
+
+@media (max-width: 1100px) {
+
+    .serviceContainer {
+        padding: 35px 20px;
+    }
+
+    .Sh1 {
+        font-size: 30px;
+    }
+
+    .Spara {
+        font-size: 18px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cardContainer {
+        min-height: 470px;
+    }
+
+    .cardContainer h2 {
+        font-size: 22px;
+    }
+
+    .cardContainer p {
+        font-size: 16px;
+    }
+
+    .sLast {
+        gap: 10px;
+    }
+
+    .card2Container {
+        font-size: 22px;
+    }
+
+    .card2Container .cardIcon2 {
+        font-size: 40px;
+    }
+}
+
+
+/* =================================
+   TABLET / SMALL LAPTOP
+   600px - 768px
+================================= */
+
+@media (max-width: 768px) {
+
+    .serviceContainer {
+        padding: 30px 15px;
+    }
+
+    .Supper {
+        font-size: 16px;
+    }
+
+    .Supper .ri-scales-line {
+        font-size: 28px;
+    }
+
+    .Sh1 {
+        font-size: 24px;
+    }
+
+    .Spara {
+        font-size: 16px;
+    }
+
+    .Spara p {
+        margin-bottom: 5px;
+    }
+
+
+    /* SHOW 2 CARDS */
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .cardContainer {
+        min-height: 430px;
+    }
+
+    .cardContainer img {
+        height: 160px;
+    }
+
+    .cardContainer .cardIcon {
+        font-size: 40px;
+        margin-top: -35px;
+    }
+
+    .cardContainer h2 {
+        font-size: 20px;
+    }
+
+    .cardContainer p {
+        font-size: 15px;
+    }
+
+
+    /* SLIDER BUTTONS */
+
+    .sliderBtn {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+
+    /* STATISTICS */
+
+    .sLast {
+        gap: 5px;
+        padding: 15px 10px;
+        border-radius: 25px;
+    }
+
+    .card2Container {
+        font-size: 18px;
+    }
+
+    .card2Container .cardIcon2 {
+        font-size: 35px;
+    }
+
+    .card2Container h1 {
+        font-size: 25px;
+    }
+}
+
+
+/* =================================
+   MOBILE
+   Below 600px
+================================= */
+
+@media (max-width: 600px) {
+
+    .serviceContainer {
+        padding: 25px 10px;
+    }
+
+
+    /* TOP TITLE */
+
+    .Supper {
+        font-size: 13px;
+        gap: 6px;
+    }
+
+    .Supper .ri-scales-line {
+        font-size: 23px;
+    }
+
+
+    /* HEADING */
+
+    .Sh1 {
+        font-size: 19px;
+    }
+
+
+    /* DESCRIPTION */
+
+    .Spara {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+
+    /* =================================
+       CARD SLIDER
+    ================================= */
+
+    .cardSlider {
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+
+    /* SHOW ONE CARD ON MOBILE */
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .cardContainer {
+        min-height: 450px;
+    }
+
+    .cardContainer img {
+        height: 200px;
+    }
+
+    .cardContainer .cardIcon {
+        font-size: 40px;
+        margin-top: -35px;
+    }
+
+    .cardContainer h2 {
+        font-size: 22px;
+    }
+
+    .cardContainer p {
+        font-size: 15px;
+    }
+
+
+    /* SLIDER BUTTON */
+
+    .sliderBtn {
+        width: 38px;
+        height: 38px;
+
+        min-width: 38px;
+
+        font-size: 17px;
+    }
+
+
+    /* =================================
+       STATISTICS
+    ================================= */
+
+    .sLast {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 0;
+
+        padding: 15px;
+
+        border-radius: 25px;
+    }
+
+
+    .card2Container {
+        width: 100%;
+
+        margin: 10px 0;
+
+        padding: 10px;
+
+        font-size: 16px;
+
+        border-right: 1px solid #222524;
+    }
+
+
+    /* Remove right border from every second card */
+
+    .card2Container:nth-child(even) {
+        border-right: none;
+    }
+
+
+    .card2Container .cardIcon2 {
+        font-size: 32px;
+    }
+
+
+    .card2Container h1 {
+        font-size: 24px;
+    }
+
+}
+
+
+/* =================================
+   VERY SMALL MOBILE
+   Below 400px
+================================= */
+
+@media (max-width: 400px) {
+
+    .serviceContainer {
+        padding: 20px 8px;
+    }
+
+    .Supper {
+        font-size: 11px;
+    }
+
+    .Supper .ri-scales-line {
+        font-size: 20px;
+    }
+
+    .Sh1 {
+        font-size: 17px;
+    }
+
+    .Spara {
+        font-size: 13px;
+    }
+
+
+    .cardSlider {
+        gap: 5px;
+    }
+
+
+    .sliderBtn {
+        width: 34px;
+        height: 34px;
+
+        min-width: 34px;
+
+        font-size: 15px;
+    }
+
+
+    .cardContainer {
+        min-height: 420px;
+    }
+
+
+    .cardContainer img {
+        height: 170px;
+    }
+
+
+    .cardContainer h2 {
+        font-size: 20px;
+    }
+
+
+    .cardContainer p {
+        font-size: 14px;
+    }
+
+
+    .cardContainer .cardIcon {
+        font-size: 35px;
+        padding: 8px;
+    }
+
+
+    .cardsbtn {
+        font-size: 16px;
+    }
+
+
+    .sLast {
+        padding: 10px;
+    }
+
+
+    .card2Container {
+        font-size: 14px;
+    }
+
+
+    .card2Container .cardIcon2 {
+        font-size: 27px;
+    }
+
+
+    .card2Container h1 {
+        font-size: 21px;
+    }
+
+}

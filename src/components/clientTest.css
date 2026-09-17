@@ -1,0 +1,425 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #121212;
+}
+.ctContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.ctCards{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+
+}
+.ctcImg{
+    margin-left: 100px;
+    img{
+    width: 580px;
+    border-radius: 40px;
+    border:1px solid #FEB537
+    }
+}
+.ctctext {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    /* FIX 1: Ensure the container itself never exceeds the screen width */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; 
+    padding: 0 50px; /* Optional: Adds a small breathing room on left/right mobile edges */
+
+    h4 {
+        color: #FEB537;
+        font-family: sans-serif;
+        font-weight: 100;
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 40px;
+        overflow-wrap: break-word; /* Prevents giant headings from breaking out too */
+    }
+    p {
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: 100;
+        text-align: start;
+        
+        /* FIX 2: Force the paragraph to wrap properly inside the flex container */
+        width: 100%;
+        min-width: 0; 
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+}
+
+.ctcReview{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    gap: 200px;
+    img{
+        width: 100px;
+        border-radius: 90%;
+    }
+    button{
+        border: none;
+        background-color: #121212;
+        color: white;
+        border-radius: 90%;
+        padding: 20px;
+        border: 1px solid white;
+        cursor: pointer;
+    }
+    button:hover{
+        border: 2px solid #FEB537;
+        color: #FEB537;
+    }
+}
+.ctcUserReview{
+    display: flex;
+    gap: 15px;
+    p{
+        font-size: 15px;
+        font-weight: 100;
+        color: rgb(197, 191, 191);
+    }
+    h3{
+        font-size: 20px;
+    }
+    button{
+        border: none;
+        background-color: #121212;
+        color: white;
+        padding: 6px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+.ctcRating {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.ctcRating .star {
+    border: none;
+    background: transparent;
+    padding: 0;
+
+    font-size: 22px;
+    color: #555;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.ctcRating .star.active {
+    color: gold;
+}
+
+.ctcRating .star:hover {
+    transform: scale(1.15);
+}
+/* =========================
+   TABLET
+========================= */
+/* 
+@media (max-width: 1000px) {
+    .ctContainer {
+        width: 100%;
+        height: auto;
+        padding: 60px 30px;
+    }
+
+    .ctCards {
+        width: 100%;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .ctcImg {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .ctcImg img {
+        width: 100%;
+        max-width: 600px;
+        display: block;
+        margin: auto;
+    }
+
+    .ctctext {
+        width: 100%;
+        padding: 0;
+    }
+
+    .ctctext h1 {
+        font-size: 36px;
+    }
+
+    .ctctext p {
+        font-size: 18px;
+    }
+
+    .ctcReview {
+        width: 100%;
+        margin-top: 30px;
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+} */
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .ctContainer {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+
+        padding: 40px 20px;
+    }
+
+    .ctCards {
+        width: 100%;
+        flex-direction: column;
+        gap: 25px;
+        align-items: stretch;
+    }
+
+
+    /* Main image */
+
+    .ctcImg {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .ctcImg img {
+        width: 100%;
+        height: auto;
+
+        border-radius: 20px;
+        display: block;
+    }
+
+
+    /* Text */
+
+    .ctctext {
+        width: 100%;
+        padding: 0;
+
+        gap: 8px;
+    }
+
+    .ctctext h4 {
+        font-size: 16px;
+    }
+
+    .ctctext h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .ctctext p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+
+    /* Client review */
+
+    .ctcReview {
+        width: 100%;
+
+        margin-top: 25px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+
+    /* User information */
+
+    .ctcUserReview {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        gap: 12px;
+    }
+
+    .ctcUserReview img {
+        width: 65px;
+        height: 65px;
+
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .ctcUserReview h3 {
+        font-size: 17px;
+    }
+
+    .ctcUserReview p {
+        font-size: 13px;
+    }
+
+
+    /* Stars */
+
+    .ctcRating {
+        margin-top: 7px;
+        gap: 2px;
+    }
+
+    .ctcRating .star {
+        font-size: 20px;
+        padding: 2px;
+    }
+
+
+    /* Arrow buttons */
+
+    .ctcbtn {
+        display: flex;
+        justify-content: flex-end;
+
+        gap: 10px;
+    }
+
+    .ctcReview .ctcbtn button {
+        padding: 12px;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .ctContainer {
+        padding: 30px 15px;
+    }
+
+    .ctctext h1 {
+        font-size: 26px;
+    }
+
+    .ctctext p {
+        font-size: 15px;
+    }
+
+    .ctcUserReview img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .ctcUserReview h3 {
+        font-size: 15px;
+    }
+
+    .ctcRating .star {
+        font-size: 18px;
+    }
+
+}
+/* ==========================
+   TABLET / IPAD
+========================== */
+
+@media (min-width: 601px) and (max-width: 1000px) {
+
+    .ctContainer {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+
+        padding: 50px 40px;
+    }
+
+    .ctCards {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 35px;
+
+        align-items: center;
+    }
+
+    .ctcImg {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .ctcImg img {
+        width: 100%;
+        max-width: 650px;
+
+        display: block;
+        margin: auto;
+
+        border-radius: 30px;
+    }
+
+    .ctctext {
+        width: 100%;
+        max-width: 650px;
+
+        padding: 0;
+
+        gap: 10px;
+    }
+
+    .ctctext h4 {
+        font-size: 18px;
+    }
+
+    .ctctext h1 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .ctctext p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .ctcReview {
+        width: 100%;
+
+        margin-top: 30px;
+
+        gap: 30px;
+
+        justify-content: space-between;
+    }
+
+}

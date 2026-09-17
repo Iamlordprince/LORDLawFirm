@@ -1,0 +1,459 @@
+/* .navfirst{
+    width: 100vw;
+    height: 6vh;
+    background-color: #091217;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-size: smaller;
+    font-family: sans-serif;
+    align-items: center;
+    .temp{
+        display: flex;
+        gap: 7px;
+    }
+}
+.one-first{
+    margin-left: 10px;
+    width: 50%;
+    display: flex;
+    gap: 25px;
+}
+.one-second{
+    width: 15%;
+
+}
+.one-third{
+    width: 30%;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+.ri-map-pin-line, .ri-time-line{
+    font-size: 15px;
+    color: #9A7839;
+}
+
+.ri-phone-line{
+    font-size: 15px;
+    color: #9A7839;
+}
+.ri-mail-line{
+    font-size: 15px;
+    color: #9A7839;
+}
+.temp1{
+    display: flex;
+    gap: 7px;
+}
+.navsecond{
+    border: 1px solid #20262E;
+    width: 100vw;
+    height: 12vh;
+    background-color: #091217;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    margin-left: 25px;
+    width: 250px;
+    height: 100px;
+}
+.butons{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 60px;
+}
+.butons button{
+    border: none;
+    background-color: #091217;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+}
+.last{
+    display: flex;
+    gap: 20px;
+}
+.contactus{
+    background-color: #091217;
+    padding: 1px 25px;
+    color: white;
+    border:none;
+    border-radius: 10px;
+}
+.free{
+    background-color: #9A7839;
+    color: black;
+    border-radius: 10px;
+    padding: 1px 25px;
+    border:none;
+} */
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   FIRST NAVBAR
+========================= */
+
+.navfirst {
+    width: 100%;
+    min-height: 6vh;
+    background-color: #091217;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 25px;
+
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+
+/* Left section */
+
+.one-first {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.one-first .temp {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+
+/* Middle section */
+
+.one-second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Right section */
+
+.one-third {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.temp1 {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+
+/* Icons */
+
+.ri-map-pin-line,
+.ri-time-line,
+.ri-phone-line,
+.ri-mail-line {
+    font-size: 15px;
+    color: #9A7839;
+}
+
+
+/* =========================
+   SECOND NAVBAR
+========================= */
+
+.navsecond {
+    width: 100%;
+    min-height: 12vh;
+
+    background-color: #091217;
+    border: 1px solid #20262E;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 25px;
+}
+
+
+/* Logo */
+
+.logo {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* Navigation buttons */
+
+.butons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.butons button {
+    border: none;
+    background-color: transparent;
+    color: white;
+
+    font-size: 15px;
+
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+
+/* Last buttons */
+
+.last {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contactus,
+.free {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+
+    padding: 10px 20px;
+
+    white-space: nowrap;
+}
+
+.contactus {
+    background-color: #091217;
+    color: white;
+    border: 1px solid #9A7839;
+}
+
+.free {
+    background-color: #9A7839;
+    color: black;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navfirst {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .one-first {
+        gap: 15px;
+    }
+
+    .one-third {
+        gap: 10px;
+    }
+
+    .navsecond {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        width: 170px;
+    }
+
+    .butons {
+        gap: 10px;
+    }
+
+    .butons button {
+        font-size: 14px;
+    }
+
+    .last {
+        gap: 8px;
+    }
+
+    .contactus,
+    .free {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Top navbar */
+
+    .navfirst {
+        min-height: auto;
+
+        flex-direction: column;
+        gap: 8px;
+
+        padding: 10px;
+    }
+
+    .one-first,
+    .one-second,
+    .one-third {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .one-first {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .one-third {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    /* Second navbar */
+
+    .navsecond {
+        min-height: auto;
+
+        flex-direction: column;
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+    .logo {
+        width: 160px;
+    }
+
+    .butons {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .butons button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .last {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .navfirst {
+        font-size: 11px;
+    }
+
+    .one-first,
+    .one-third {
+        gap: 10px;
+    }
+
+    .ri-map-pin-line,
+    .ri-time-line,
+    .ri-phone-line,
+    .ri-mail-line {
+        font-size: 13px;
+    }
+
+
+    .navsecond {
+        padding: 12px 10px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+
+    .butons {
+        gap: 3px;
+    }
+
+    .butons button {
+        font-size: 13px;
+        padding: 7px;
+    }
+
+    .last {
+        gap: 8px;
+    }
+
+    .contactus,
+    .free {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL DEVICES
+========================= */
+
+@media (max-width: 360px) {
+
+    .one-first,
+    .one-third {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .butons {
+        flex-direction: column;
+    }
+
+    .butons button {
+        width: 100%;
+    }
+
+    .last {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contactus,
+    .free {
+        width: 100%;
+    }
+}

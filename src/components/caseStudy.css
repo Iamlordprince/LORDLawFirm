@@ -1,0 +1,631 @@
+/* *{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.caseContainer{
+    background-color: #051016;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-top: 50px;
+    gap: 13px;
+}
+.folder{
+    font-family: sans-serif;
+    color: #895C21;
+    font-size: 25px;
+    font-weight: 100;
+}
+.CStext{
+    display: flex;
+    align-items: center;
+    gap: 27vw;
+}
+.CSh1{
+    font-size: 25px;
+    h1{
+    font-weight: lighter;
+    }
+    span{
+        color: #895C21;
+    }
+}
+
+.ri-arrow-left-line{
+    background-color: #10171D;
+        border: 2px solid white;
+        padding: 20px;
+        border-radius: 50%;
+        color: #895C21;
+        margin-right: 7px;
+        font-size: 25px;
+        cursor: pointer;
+}
+.ri-arrow-right-line{
+    background-color: #10171D;
+        border: 2px solid white;
+        padding: 20px;
+        border-radius: 50%;
+        color: #895C21;
+        margin-left: 7px;
+        font-size: 25px;
+        cursor: pointer;
+}
+.ri-arrow-left-line:hover{
+    border: 2px solid #895C21;
+}
+.ri-arrow-right-line:hover{
+    border: 2px solid #895C21;
+
+}
+.CSpara{
+    p{
+        font-size: 20px;
+        font-weight: 100;
+    }
+}
+.csDiv{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+.cscdcontainer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 24vw;
+    height: 60vh;
+    background-color: #051014;
+    gap: 18px;
+}
+.csImg{
+    img{
+        width: 100%;
+    border-radius: 5px;
+    }
+
+}
+.csH{
+    margin-left: 10px;
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+    h1{
+        font-size: 55px;
+        text-align: center;
+         color: transparent;
+        -webkit-text-stroke: 1px #5a5a5a;
+        border-width: 2px;
+        border-style: solid;
+        border-color: #051014 #895C21 #051014 #051014;
+        padding: 16px;
+    }
+}
+.cstitledes{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h2{
+        text-align: start;
+    }
+    p{
+        text-align: start;
+    }
+    button{
+        background-color: #051016;
+        color: #895C21;
+        border: none;
+        text-align: start;
+        font-size: 20px;
+        cursor: pointer;
+    }
+} */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #051016;
+    color: white;
+    overflow-x: hidden;
+}
+
+.caseContainer {
+    background-color: #051016;
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 50px 7vw;
+    gap: 13px;
+
+    margin: 0;
+}
+
+/* =========================
+   FOLDER TITLE
+========================= */
+
+.folder {
+    font-family: sans-serif;
+    color: #895C21;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+/* =========================
+   MAIN HEADING + ARROWS
+========================= */
+
+.CStext {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.CSh1 {
+    font-size: 25px;
+}
+
+.CSh1 h1 {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.CSh1 span {
+    color: #895C21;
+}
+
+/* =========================
+   ARROWS
+========================= */
+
+.CSArrow {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.ri-arrow-left-line,
+.ri-arrow-right-line {
+    background-color: #10171D;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 50%;
+    color: #895C21;
+    font-size: 25px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.ri-arrow-left-line {
+    margin-right: 7px;
+}
+
+.ri-arrow-right-line {
+    margin-left: 7px;
+}
+
+.ri-arrow-left-line:hover,
+.ri-arrow-right-line:hover {
+    border-color: #895C21;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.CSpara {
+    margin-top: 10px;
+}
+
+.CSpara p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* =========================
+   CARDS CONTAINER
+========================= */
+
+.csDiv {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 80px;
+
+    overflow-x: auto;
+    padding-bottom: 20px;
+
+    scrollbar-width: none;
+}
+
+.csDiv::-webkit-scrollbar {
+    display: none;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.cscdcontainer {
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 24vw;
+    min-width: 280px;
+    height: auto;
+
+    background-color: #051014;
+
+    gap: 18px;
+
+    flex-shrink: 0;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.csImg img {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: 5px;
+}
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.csH {
+    margin-left: 10px;
+
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+    align-items: center;
+}
+
+.csH h1 {
+    font-size: 55px;
+    font-weight: 400;
+
+    text-align: center;
+
+    color: transparent;
+    -webkit-text-stroke: 1px #5a5a5a;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color:
+        #051014
+        #895C21
+        #051014
+        #051014;
+
+    padding: 16px;
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.cstitledes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cstitledes h2 {
+    text-align: start;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.cstitledes p {
+    text-align: start;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.cstitledes button {
+    background-color: #051016;
+    color: #895C21;
+
+    border: none;
+
+    text-align: start;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1024px) {
+
+    .caseContainer {
+        padding: 40px 5vw;
+    }
+
+    .CStext {
+        gap: 30px;
+    }
+
+    .CSh1 {
+        font-size: 20px;
+    }
+
+    .CSpara p {
+        font-size: 18px;
+    }
+
+    .CSArrow {
+        gap: 5px;
+    }
+
+    .ri-arrow-left-line,
+    .ri-arrow-right-line {
+        padding: 16px;
+        font-size: 22px;
+    }
+
+    .csDiv {
+        gap: 30px;
+    }
+
+    .cscdcontainer {
+        width: 40vw;
+        min-width: 300px;
+    }
+
+    .csImg img {
+        height: 280px;
+    }
+
+    .csH {
+        gap: 25px;
+    }
+
+    .csH h1 {
+        font-size: 45px;
+        padding: 12px;
+    }
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+/* =========================
+   MOBILE - GRID LAYOUT
+========================= */
+
+@media (max-width: 768px) {
+
+    .caseContainer {
+        width: 100%;
+        min-height: 100vh;
+        padding: 30px 15px;
+        margin: 0;
+        gap: 15px;
+    }
+
+    .folder {
+        font-size: 18px;
+    }
+
+    /* Heading */
+
+    .CStext {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .CSh1 {
+        font-size: 17px;
+    }
+
+    .CSh1 h1 {
+        line-height: 1.3;
+    }
+
+    /* Arrows */
+
+    .CSArrow {
+        align-self: flex-end;
+        display: flex;
+    }
+
+    .ri-arrow-left-line,
+    .ri-arrow-right-line {
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    /* Paragraph */
+
+    .CSpara {
+        margin-top: 5px;
+    }
+
+    .CSpara p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    /* =========================
+       GRID
+    ========================= */
+
+    .csDiv {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        padding: 0;
+        margin-top: 20px;
+        overflow: visible;
+    }
+
+    /* =========================
+       CARD BOX
+    ========================= */
+
+    .cscdcontainer {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+
+        margin-top: 0;
+        padding: 12px;
+
+        background-color: #081217;
+
+        border: 1px solid #253038;
+        border-radius: 10px;
+
+        display: grid;
+        grid-template-columns: 110px 1fr;
+
+        gap: 15px;
+
+        align-items: start;
+    }
+
+    /* =========================
+       IMAGE BOX
+    ========================= */
+
+    .csImg {
+        width: 110px;
+        height: 130px;
+
+        overflow: hidden;
+        border-radius: 6px;
+    }
+
+    .csImg img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 6px;
+    }
+
+    /* =========================
+       NUMBER
+    ========================= */
+
+    .csH {
+        margin: 0;
+
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .csH h1 {
+        font-size: 35px;
+        padding: 6px 8px;
+
+        flex-shrink: 0;
+    }
+
+    /* =========================
+       CARD CONTENT
+    ========================= */
+
+    .cstitledes {
+        gap: 10px;
+    }
+
+    .cstitledes h2 {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .cstitledes p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .cstitledes button {
+        font-size: 15px;
+    }
+}
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+@media (max-width: 480px) {
+
+    .caseContainer {
+        padding: 25px 12px;
+    }
+
+    .cscdcontainer {
+        grid-template-columns: 90px 1fr;
+        padding: 10px;
+        gap: 12px;
+    }
+
+    .csImg {
+        width: 90px;
+        height: 115px;
+    }
+
+    .csH {
+        gap: 10px;
+    }
+
+    .csH h1 {
+        font-size: 30px;
+        padding: 5px;
+    }
+
+    .cstitledes h2 {
+        font-size: 16px;
+    }
+
+    .cstitledes p {
+        font-size: 13px;
+    }
+
+    .cstitledes button {
+        font-size: 14px;
+    }
+}

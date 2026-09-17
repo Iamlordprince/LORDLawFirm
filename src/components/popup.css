@@ -1,0 +1,285 @@
+
+/* Full screen background */
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+}
+
+
+/* Main popup */
+.popupContainer {
+    width: 100%;
+    max-width: 550px;
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    background-color: #080D11;
+
+    border: 1px solid rgba(204, 155, 59, 0.5);
+    border-radius: 18px;
+
+    padding: 35px;
+
+    position: relative;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+
+    animation: popupShow 0.25s ease;
+}
+
+
+/* Popup opening animation */
+@keyframes popupShow {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* Close button */
+.popup {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+}
+
+.popup .closeBtn {
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid rgba(204, 155, 59, 0.4);
+    border-radius: 50%;
+
+    background-color: transparent;
+    color: #e74c3c;
+    font-family: sans-serif;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.2s ease;
+}
+
+.popup .closeBtn:hover {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+
+/* Form section */
+.popupText {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    color: white;
+}
+
+
+/* Heading */
+.popupText h2 {
+    color: #CC9B3B;
+    font-size: 28px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+
+/* Small description */
+.popupText p {
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+/* Labels */
+.popupText h3 {
+    color: #CC9B3B;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    margin-top: 8px;
+}
+
+
+/* Inputs */
+.popupText input {
+    width: 100%;
+
+    padding: 12px 15px;
+
+    background-color: #10171C;
+
+    color: white;
+
+    border: 1px solid #263138;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.2s ease;
+}
+
+
+/* Input focus */
+.popupText input:focus {
+    border-color: #CC9B3B;
+
+    box-shadow: 0 0 0 2px rgba(204, 155, 59, 0.12);
+}
+
+
+/* Placeholder */
+.popupText input::placeholder {
+    color: #777;
+}
+
+
+/* Date/time input icons */
+.popupText input[type="date"],
+.popupText input[type="time"] {
+    color-scheme: dark;
+}
+
+
+/* Submit button */
+.popupText .submitBtn {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 20px;
+
+    background-color: #CC9B3B;
+    color: #080D11;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.popupText .submitBtn:hover {
+    background-color: #e0b452;
+
+    transform: translateY(-1px);
+}
+
+
+/* ------------------------- */
+/* Tablet */
+/* ------------------------- */
+
+@media (max-width: 768px) {
+
+    .overlay {
+        padding: 15px;
+    }
+
+    .popupContainer {
+        max-width: 500px;
+        padding: 30px 25px;
+    }
+
+    .popupText h2 {
+        font-size: 25px;
+    }
+}
+
+
+/* ------------------------- */
+/* Mobile */
+/* ------------------------- */
+
+@media (max-width: 480px) {
+
+    .overlay {
+        padding: 12px;
+        align-items: center;
+    }
+
+    .popupContainer {
+        width: 100%;
+        max-height: 92vh;
+
+        padding: 30px 18px 20px;
+
+        border-radius: 14px;
+    }
+
+    .popup {
+        top: 10px;
+        right: 10px;
+    }
+
+    .popup .closeBtn {
+        width: 32px;
+        height: 32px;
+
+        font-size: 16px;
+    }
+
+    .popupText h2 {
+        font-size: 22px;
+    }
+
+    .popupText p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .popupText h3 {
+        font-size: 14px;
+    }
+
+    .popupText input {
+        padding: 11px 12px;
+        font-size: 14px;
+    }
+
+    .popupText .submitBtn {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
